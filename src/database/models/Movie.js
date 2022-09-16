@@ -13,7 +13,7 @@ const cols = {
         allowNull : false,
     },
     rating : {
-        type : dataTypes.DECIMAL(3,1).UNSIGNED,
+        type : dataTypes.DECIMAL(3, 1).UNSIGNED,
         allowNull : false,
     },
     awards : {
@@ -21,7 +21,7 @@ const cols = {
         allowNull : false,
         defaultValue : '0'
     },
-    releaseDate : {
+    release_date : {
         type : dataTypes.DATE,
         allowNull : false,
     },
