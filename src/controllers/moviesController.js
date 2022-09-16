@@ -4,7 +4,9 @@ module.exports = {
     list: (req, res) => {
         db.Movie.findAll()
             .then((movies) => {
-            return res.send(movies)
+            return res.render('moviesList', {
+                movies
+            })
         })
         .catch((error) => console.log(error))
     }
