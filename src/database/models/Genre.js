@@ -7,6 +7,7 @@ const cols = {
         primaryKey : true,
         allowNull : false,
         autoincrement : true,
+        unique : true,
     },
     name : {
         type : dataTypes.STRING(100),
@@ -18,7 +19,7 @@ const cols = {
         unique : true,
     },
     active : {
-        type : dataTypes.INTEGER(1),
+        type : dataTypes.BOOLEAN,
         allowNull : false,
         defaultValue : '1',
     },

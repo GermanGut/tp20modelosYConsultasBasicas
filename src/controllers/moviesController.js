@@ -13,7 +13,7 @@ module.exports = {
     detail: (req, res) => {
         db.Movie.findByPk(req.params.id)
             .then(movie => {
-                return res.render('movieDetail', {
+                return res.render('moviesDetail', {
                     movie
                 })
             })
@@ -25,9 +25,8 @@ module.exports = {
             ]
         })
             .then(movies => {
-                /* return res.send(movies) */
-                res.render('newestMovies', {
-                    movie
+                return res.render('newestMovies', {
+                    movies
                 })
             })
             .catch(error => console.log(error))
@@ -40,7 +39,7 @@ module.exports = {
             limit : 5
         })
         .then(movies => {
-            return res.render('recomendedMovies', {
+            return res.render('recommendedMovies', {
                 movies
             })
         })
